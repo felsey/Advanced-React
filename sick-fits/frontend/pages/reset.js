@@ -3,7 +3,6 @@ import RequestReset from '../components/RequestReset';
 import Reset from '../components/Reset';
 
 const ResetPage = ({ query }) => {
-  console.log(query);
   if (!query?.token) {
     return (
       <div>
@@ -18,7 +17,7 @@ const ResetPage = ({ query }) => {
 
   return (
     <div>
-      <Reset token={query.token} />
+      <Reset token={query.token} email={query.email} />
     </div>
   );
 };

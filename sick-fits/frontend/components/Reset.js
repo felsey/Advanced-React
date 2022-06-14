@@ -23,7 +23,7 @@ const RESET_MUTATION = gql`
   }
 `;
 
-const Reset = ({ token }) => {
+const Reset = ({ token, email }) => {
   const { register, watch, handleSubmit, reset } = useForm();
 
   const [resetPassword, { data, loading, error }] = useMutation(
@@ -41,7 +41,6 @@ const Reset = ({ token }) => {
     ? data?.redeemUserPasswordResetToken
     : undefined;
 
-  console.log(error);
   const onFormSubmit = async () => {
     await resetPassword().catch(console.log(error));
     reset();
@@ -66,6 +65,7 @@ const Reset = ({ token }) => {
             type="email"
             placeholder="Your email address"
             required
+            value={email}
             {...register('email')}
           />
         </label>
