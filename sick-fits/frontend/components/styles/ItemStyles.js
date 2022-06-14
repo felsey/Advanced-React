@@ -33,6 +33,9 @@ const Item = styled.div`
       padding: 1rem;
     }
   }
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 export default Item;

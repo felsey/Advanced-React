@@ -1,3 +1,3 @@
-export default function OrderPage() {
-  return <div>hellow</div>;
-}
+const OrderPage = () => <div>hello</div>;
+
+export default OrderPage;

@@ -1,3 +1,3 @@
-export default function AccountPage() {
-  return <div>hellow</div>;
-}
+const AccountPage = () => <div>hello</div>;
+
+export default AccountPage;

@@ -69,6 +69,9 @@ const Form = styled.form`
       animation: ${loading} 0.5s linear infinite;
     }
   }
+  button:hover {
+    cursor: pointer;
+  }
 `;
 
 export default Form;
