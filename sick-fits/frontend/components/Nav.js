@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import SignOut from './SignOut';
-import SignUp from './SignUp';
 import NavStyles from './styles/NavStyles';
 import useUser from './User';
 

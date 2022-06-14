@@ -1,9 +1,11 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/jsx-props-no-spreading */
 import NProgress from 'nprogress';
 import Router from 'next/router';
+import { ApolloProvider } from '@apollo/client';
 import Page from '../components/Page';
 import 'nprogress/nprogress.css';
 import '../components/styles/nprogress.css';
-import { ApolloProvider } from '@apollo/client';
 import withData from '../lib/withData';
 
 Router.events.on('routeChangeStart', () => NProgress.start());
@@ -29,23 +31,3 @@ MyApp.getInitialProps = async ({ Component, ctx }) => {
 // boilerplate that happens because apollo and nextjs work together
 
 export default withData(MyApp);
-
-// export default function MyApp({ Component, pageProps, apollo }) {
-//   return (
-//     <ApolloProvider client={apollo}>
-//       <Page>
-//         <Component {...pageProps} />
-//       </Page>
-//     </ApolloProvider>
-//   );
-// }
-
-// MyApp.getInitialProps = async ({ Component, ctx }) => {
-//   let pageProps = {};
-//   if (Component.getInitialProps) {
-//     pageProps = await Component.getInitialProps(ctx);
-//   }
-//   pageProps.query = ctx.query;
-//   return { pageProps };
-// };
-// boilerplate that happens because apollo and nextjs work together

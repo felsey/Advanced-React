@@ -1,10 +1,10 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import { useMutation } from '@apollo/client';
 import gql from 'graphql-tag';
 import { useForm } from 'react-hook-form';
 import Link from 'next/dist/client/link';
 import DisplayError from './DisplayError';
 import Form from './styles/Form';
-import { CURRENT_USER_QUERY } from './User';
 
 const SIGNUP_MUTATION = gql`
   mutation SIGNUP_MUTATION(
@@ -26,9 +26,8 @@ const SignUp = () => {
     variables: watch(),
   });
 
-  const onFormSubmit = async (data) => {
-    const response = await createUser().catch(console.error);
-    console.log('user created!');
+  const onFormSubmit = async () => {
+    await createUser().catch(console.error);
     reset();
   };
 

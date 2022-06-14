@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import gql from 'graphql-tag';
 import { useMutation } from '@apollo/client';
 import { useForm } from 'react-hook-form';
@@ -28,7 +29,7 @@ const SIGNIN_MUTATION = gql`
 const SignIn = () => {
   const { register, handleSubmit, watch, reset } = useForm();
 
-  const [signin, { data, loading }] = useMutation(SIGNIN_MUTATION, {
+  const [signin, { data }] = useMutation(SIGNIN_MUTATION, {
     variables: watch(),
 
     // refetch the currently logged in user
