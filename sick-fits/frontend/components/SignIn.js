@@ -60,7 +60,7 @@ const SignIn = () => {
           <input
             type="email"
             name="email"
-            placeholder="Email"
+            placeholder="Your email address"
             autoComplete="email"
             required
             {...register('email')}

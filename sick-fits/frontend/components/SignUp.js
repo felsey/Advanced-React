@@ -64,7 +64,7 @@ const SignUp = () => {
           Email
           <input
             type="email"
-            placeholder="Email"
+            placeholder="Your email address"
             required
             {...register('email')}
           />
