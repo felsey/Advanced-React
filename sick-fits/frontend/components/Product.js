@@ -1,9 +1,11 @@
+/* eslint-disable react/prop-types */
 import Link from 'next/link';
 import ItemStyles from './styles/ItemStyles';
 import Title from './styles/Title';
 import PriceTag from './styles/PriceTag';
 import formatMoney from '../lib/formatMoney';
 import DeleteProduct from './DeleteProject';
+import AddToCart from './AddToCart';
 
 const Product = ({ product }) => {
   const { name, description, photo, price, id, status } = product;
@@ -32,6 +34,7 @@ const Product = ({ product }) => {
           Edit ✏️
         </Link>
         <DeleteProduct product={product}>Delete product</DeleteProduct>
+        <AddToCart id={product.id} />
       </div>
     </ItemStyles>
   );

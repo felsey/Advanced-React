@@ -35,6 +35,6 @@ export const Product = list({
       },
     }),
     price: integer(),
-    // TODO: photo
+    // cartItem: relationship({ ref: 'CartItem.product' }),
   },
 });
